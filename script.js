@@ -212,3 +212,15 @@ stopAll.addEventListener('click', () => {
     guitar.triggerRelease();
     flute.triggerRelease();
 });
+
+const words = ["Piano", "Guitar", "Drums", "Flute"];
+let index = 0;
+
+function changeWord() {
+  const wordElement = document.getElementById("changing-word");
+  wordElement.textContent = words[index];
+  index = (index + 1) % words.length;
+}
+
+setInterval(changeWord, 2000); // Change the word every 2 seconds
+
