@@ -48,7 +48,6 @@ h2 {
     text-align: center;
 }
 
-/* Piano Styles */
 .piano-keys {
     display: flex;
     justify-content: center;
@@ -88,7 +87,7 @@ h2 {
     background: #666;
 }
 
-/* Guitar Styles */
+
 .guitar-strings {
     display: flex;
     flex-direction: column;
@@ -112,7 +111,6 @@ h2 {
     transform: scaleX(1.02);
 }
 
-/* Drum Styles */
 .drum-kit {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
@@ -138,7 +136,7 @@ h2 {
     background: #e0e0e0;
 }
 
-/* Flute Styles */
+
 .flute-notes {
     display: flex;
     justify-content: center;
@@ -163,7 +161,7 @@ h2 {
     background: #6b3410;
 }
 
-/* Controls */
+
 .controls {
     display: flex;
     flex-direction: column;
