@@ -1,27 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Virtual Piano</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Sound Lab</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="piano">
-    WELCOME TO PIANO
-    <div class="key white" data-note="C"></div>
-    <div class="key black" data-note="C#"></div>
-    <div class="key white" data-note="D"></div>
-    <div class="key black" data-note="D#"></div>
-    <div class="key white" data-note="E"></div>
-    <div class="key white" data-note="F"></div>
-    <div class="key black" data-note="F#"></div>
-    <div class="key white" data-note="G"></div>
-    <div class="key black" data-note="G#"></div>
-    <div class="key white" data-note="A"></div>
-    <div class="key black" data-note="A#"></div>
-    <div class="key white" data-note="B"></div>
-  </div>
-  <script src="script.js"></script>
+    <div class="container">
+        <h1>Interactive Sound Lab</h1>
+        
+        <div class="instruments">
+            <div class="instrument-section">
+                <h2>Piano</h2>
+                <div class="piano-keys">
+                    <div class="key white" data-note="C4">C</div>
+                    <div class="key black" data-note="C#4">C#</div>
+                    <div class="key white" data-note="D4">D</div>
+                    <div class="key black" data-note="D#4">D#</div>
+                    <div class="key white" data-note="E4">E</div>
+                    <div class="key white" data-note="F4">F</div>
+                    <div class="key black" data-note="F#4">F#</div>
+                    <div class="key white" data-note="G4">G</div>
+                    <div class="key black" data-note="G#4">G#</div>
+                    <div class="key white" data-note="A4">A</div>
+                    <div class="key black" data-note="A#4">A#</div>
+                    <div class="key white" data-note="B4">B</div>
+                </div>
+            </div>
+
+            <div class="instrument-section">
+                <h2>Guitar</h2>
+                <div class="guitar-strings">
+                    <div class="string" data-note="E2">E</div>
+                    <div class="string" data-note="A2">A</div>
+                    <div class="string" data-note="D3">D</div>
+                    <div class="string" data-note="G3">G</div>
+                    <div class="string" data-note="B3">B</div>
+                    <div class="string" data-note="E4">E</div>
+                </div>
+            </div>
+
+            <div class="instrument-section">
+                <h2>Drums</h2>
+                <div class="drum-kit">
+                    <div class="drum" data-sound="kick">Kick</div>
+                    <div class="drum" data-sound="snare">Snare</div>
+                    <div class="drum" data-sound="hihat">Hi-Hat</div>
+                    <div class="drum" data-sound="tom">Tom</div>
+                    <div class="drum" data-sound="crash">Crash</div>
+                </div>
+            </div>
+
+            <div class="instrument-section">
+                <h2>Flute</h2>
+                <div class="flute-notes">
+                    <div class="note" data-note="C5">C</div>
+                    <div class="note" data-note="D5">D</div>
+                    <div class="note" data-note="E5">E</div>
+                    <div class="note" data-note="F5">F</div>
+                    <div class="note" data-note="G5">G</div>
+                    <div class="note" data-note="A5">A</div>
+                    <div class="note" data-note="B5">B</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="playAll">Play All</button>
+            <button id="stopAll">Stop All</button>
+            <div class="volume-control">
+                <label for="masterVolume">Master Volume</label>
+                <input type="range" id="masterVolume" min="0" max="100" value="70">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
